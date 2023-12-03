@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: linear-gradient(65deg, #eff1f8, #dadcdf);
+  min-height: 100vh;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+h1 {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+h2 {
+  margin: 0.6rem auto;
+  color: #afdde1;
+}
+
+/* APP HEADER */
+/* INPUT */
+#searchInput {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  outline: none;
+
+  margin-bottom: 3rem;
+}
+#range-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  background: rgb(46, 45, 45);
+  border-radius: 2rem;
+  padding: 1rem;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.452);
+}
+input[type="range"] {
+  appearance: none;
+  width: 16rem;
+  background: #fff;
+  border-radius: 1rem;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  appearance: none;
+  height: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 3rem;
+  width: 0.8rem;
+  background: linear-gradient(65deg, lightblue, blue);
+  background-blend-mode: multiply;
+  border-radius: 2rem;
+  transform: translateY(-11px);
+  transition: all 0.15s ease;
+  cursor: grab;
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.2) translateY(-9px);
+  cursor: grabbing;
+}
+#rangeId {
+  border: none;
+  background: transparent;
+  width: 3rem;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+/* BUTTON */
+#button-container {
+  width: 70%;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  gap: 2rem;
+}
+#button-container > button {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: lightblue;
+  color: rgb(46, 45, 45);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* CARD */
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+.card {
+  width: 16rem;
+  height: 10rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  position: relative;
+}
+.card:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+.card-infos {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(243, 243, 243);
+  transform: scaleY(0);
+  opacity: 0;
+  transition: all 0.3s;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card:hover .card-infos {
+  opacity: 1;
+  transform: scaleY(1);
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
